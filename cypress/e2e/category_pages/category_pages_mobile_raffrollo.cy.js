@@ -1,22 +1,26 @@
 
-describe('Integration test with visual testing - simulated mobile testing on doppelrollo category page', function () {
+import "cypress-real-events/support";
 
-    it('mobile testing on doppelrollo category page', function () {
+
+describe('Integration test with visual testing - simulated mobile testing on raffrollo category page', function () {
+
+    it('mobile testing on raffrollo category page', function () {
 
         // cy.viewport() does not really work on percy at first sight 
         // but needed for the mobile testing, e.g. for view of mobile PDP, tool tip, mobile tip etc.
         cy.viewport('iphone-6')
 
+
         // load category page
-        cy.visit('/doppelrollo/alle-doppelrollos')
+        cy.visit('/raffrollo/raffrollo-beige')
         // cy.checkFreshChat()
 
-        cy.argosScreenshot('mobile view: /doppelrollo/alle-doppelrollos')//, {
+        cy.argosScreenshot('mobile view: /raffrollo/raffrollo-beige')
 
-        // activate tooltip of Rayure 5001
-        cy.get('img[alt="Rayure 5001"]').click()
+        // activate tooltip of Zadar 9021
+        cy.get('img[alt="Zadar 9021"]').click()
 
-        // wait till all 5 mini tooltip images are present
+        // wait till all  mini tooltip images are present
         cy.get('.tooltip.active > .tooltip-info-container > ul li')
             .should('have.length', 4)
             .each(($li) => { // iterate through each 'li'
@@ -25,15 +29,14 @@ describe('Integration test with visual testing - simulated mobile testing on dop
                     cy.wrap($el).should('be.visible')
                 })
             })
-        cy.argosScreenshot('active tooltip: Rayure 5001')
+        cy.argosScreenshot('active tooltip: Zadar 9021')
 
-        // deactivate tooltip of Rayure 5001
+        // deactivate tooltip of Zadar 9021
         cy.get('div.tooltip.active').click()
-        cy.argosScreenshot('inactive tooltip: Rayure 5001')
+        cy.argosScreenshot('inactive tooltip: Zadar 9021')
 
-
-        // activate tooltip of Rayure 5005
-        cy.get('img[alt="Rayure 5005"]').click()
+        // activate tooltip of Dillio 9071
+        cy.get('img[alt="Dillio 9071"]').click()
 
         // wait till all 4 mini tooltip images are present
         cy.get('.tooltip.active > .tooltip-info-container > ul li')
@@ -44,16 +47,14 @@ describe('Integration test with visual testing - simulated mobile testing on dop
                     cy.wrap($el).should('be.visible')
                 })
             })
-        cy.argosScreenshot('active tooltip: Rayure 5005')
+        cy.argosScreenshot('active tooltip: Dillio 9071')
 
-
-        // deactivate tooltip of Rayure 5005
+        // deactivate tooltip of Dillio 9071
         cy.get('div.tooltip.active').click()
-        cy.argosScreenshot('inactive tooltip: Rayure 5005')
+        cy.argosScreenshot('inactive tooltip: Dillio 9071')
 
-
-        // activate tooltip of Rayure 5004
-        cy.get('img[alt="Doppelrollo 5004 "]').click()
+        // activate tooltip of Cocco 9010
+        cy.get('img[alt="Cocco 9010"]').click()
 
         // wait till all 4 mini tooltip images are present
         cy.get('.tooltip.active > .tooltip-info-container > ul li')
@@ -64,18 +65,18 @@ describe('Integration test with visual testing - simulated mobile testing on dop
                     cy.wrap($el).should('be.visible')
                 })
             })
-        cy.argosScreenshot('active tooltip: Rayure 5004')
+        cy.argosScreenshot('active tooltip: Cocco 9010')
 
-
-        // go to mobile configurator of  Rayure 5004
+        // go to mobile configurator of  Cocco 9010
         cy.get('div.tooltip.active').find('.mobile_tip_content').click()
 
         // new page will be loaded
+        // cy.wait('@lazyload') // does not help instead of be.visible
         // cy.checkFreshChat()
 
-        // wait till all 5 gallery images are present
+        // wait till all 2 gallery images are present
         cy.get('.more-views li')
-            .should('have.length', 5)
+            .should('have.length', 2)
             .each(($li) => { // iterate through each child of li
                 cy.wrap($li).find('img').should('be.visible')
             })
@@ -84,7 +85,6 @@ describe('Integration test with visual testing - simulated mobile testing on dop
         cy.get('#main-image').should('be.visible')
 
         // take snapshot of mobile configurator
-        cy.argosScreenshot('mobile plissee configurator with Rayure 5004')
-
+        cy.argosScreenshot('mobile plissee configurator with Cocco 9010')
     })
 })
