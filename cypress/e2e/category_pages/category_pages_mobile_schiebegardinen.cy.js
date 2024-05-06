@@ -12,7 +12,6 @@ describe('Integration test with visual testing - simulated mobile testing on sch
 
         // load category page
         cy.visit('/schiebegardinen/schiebegardinen-beige')
-        // cy.checkFreshChat()
 
         cy.percySnapshot('mobile view: /schiebegardinen/schiebegardinen-beige', { widths: [375] })
 
@@ -70,7 +69,7 @@ describe('Integration test with visual testing - simulated mobile testing on sch
         cy.get('div.tooltip.active').find('.mobile_tip_content').click()
 
         // new page will be loaded
-        // cy.checkFreshChat()
+        // 
 
         // wait till all 5 gallery images are present
         cy.get('.more-views li')

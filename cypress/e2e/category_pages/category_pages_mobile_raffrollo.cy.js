@@ -13,7 +13,6 @@ describe('Integration test with visual testing - simulated mobile testing on raf
 
         // load category page
         cy.visit('/raffrollo/raffrollo-beige')
-        // cy.checkFreshChat()
 
         cy.argosScreenshot('mobile view: /raffrollo/raffrollo-beige')
 
@@ -72,7 +71,7 @@ describe('Integration test with visual testing - simulated mobile testing on raf
 
         // new page will be loaded
         // cy.wait('@lazyload') // does not help instead of be.visible
-        // cy.checkFreshChat()
+        // 
 
         // wait till all 2 gallery images are present
         cy.get('.more-views li')

@@ -9,7 +9,6 @@ describe('Integration test with visual testing - simulated mobile testing on dop
 
         // load category page
         cy.visit('/doppelrollo/alle-doppelrollos')
-        // cy.checkFreshChat()
 
         cy.argosScreenshot('mobile view: /doppelrollo/alle-doppelrollos')//, {
 
@@ -71,7 +70,7 @@ describe('Integration test with visual testing - simulated mobile testing on dop
         cy.get('div.tooltip.active').find('.mobile_tip_content').click()
 
         // new page will be loaded
-        // cy.checkFreshChat()
+        // 
 
         // wait till all 5 gallery images are present
         cy.get('.more-views li')

@@ -1,18 +1,18 @@
-var data = require("../../fixtures/cat_pages_rollo.json");
-var categoryPages = data.URLS;
+var data = require("../../fixtures/product_pages_plissee.json");
+var pages = data.URLS;
 let scrollToBottom = require("scroll-to-bottomjs");
 
-describe('Integration test with visual testing - Rollo category pages', function () {
+describe('Integration test with visual testing - Plissee product pages', function () {
 
 
-    categoryPages.forEach(function (link) {
+    pages.forEach(function (link) {
 
         it('Load page: ' + link + ' & take argos snapshot', function () {
-
+          
             cy.visit(link)
-            cy.window().then(cyWindow => scrollToBottom({ remoteWindow: cyWindow, frequency: 150, timing: 50 }));
-            
-            cy.argosScreenshot(link, {
+            cy.window().then(cyWindow => scrollToBottom({ remoteWindow: cyWindow, frequency: 150, timing: 50 }));  
+
+             cy.argosScreenshot(link, {
                 viewports: [
                     "iphone-6", // Use device preset for iphone-6
                     { width: 1280, height: 1024 }, // Specify dimensions directly

@@ -13,8 +13,6 @@ describe('Integration test with visual testing - Plissee category pages', functi
             cy.visit(link)
             cy.window().then(cyWindow => scrollToBottom({ remoteWindow: cyWindow, frequency: 150, timing: 50 }));
 
-            // cy.checkFreshChat()
-
             cy.argosScreenshot(link, {
                 viewports: [
                     "iphone-6", // Use device preset for iphone-6

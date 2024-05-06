@@ -8,7 +8,6 @@ describe('Integration test with visual testing - hover on category pages', funct
 
         cy.visit('/plissee/plissee-gelb')
         cy.window().then(cyWindow => scrollToBottom({ remoteWindow: cyWindow, frequency: 150, timing: 50 }));
-        // cy.checkFreshChat()
 
         //************************************************* TOOLTIP PLISSEE COLOR BREEZE 1740 **************************************************** */
         //****************************************************************************************************************************** */
@@ -87,7 +86,7 @@ describe('Integration test with visual testing - hover on category pages', funct
 
         cy.visit('/rollo/rollo-beige')
         cy.window().then(cyWindow => scrollToBottom({ remoteWindow: cyWindow, frequency: 150, timing: 50 }));
-        // cy.checkFreshChat()
+        // 
 
         //************************************************* TOOLTIP ROLLO Basic DimOut 3025 **************************************************** */
         //****************************************************************************************************************************** */
@@ -165,7 +164,7 @@ describe('Integration test with visual testing - hover on category pages', funct
 
         cy.visit('/doppelrollo/doppelrollo-grau')
         cy.window().then(cyWindow => scrollToBottom({ remoteWindow: cyWindow, frequency: 150, timing: 50 }));
-        // cy.checkFreshChat()
+        // 
 
         //************************************************* TOOLTIP DOPPELROLLO Acorda 5090 **************************************************** */
         //****************************************************************************************************************************** */
@@ -242,7 +241,7 @@ describe('Integration test with visual testing - hover on category pages', funct
 
         cy.visit('/schiebegardinen/schiebegardinen-blau')
         cy.window().then(cyWindow => scrollToBottom({ remoteWindow: cyWindow, frequency: 150, timing: 50 }));
-        // cy.checkFreshChat()
+        // 
 
         //************************************************* TOOLTIP Schiebegardine Bonito 7337 **************************************************** */
         //****************************************************************************************************************************** */
@@ -319,7 +318,7 @@ describe('Integration test with visual testing - hover on category pages', funct
 
         cy.visit('/raffrollo/raffrollo-beige')
         cy.window().then(cyWindow => scrollToBottom({ remoteWindow: cyWindow, frequency: 150, timing: 50 }));
-        // cy.checkFreshChat()
+        // 
 
         //************************************************* TOOLTIP Raffrollo Zadar 9021 **************************************************** */
         //****************************************************************************************************************************** */
@@ -398,7 +397,7 @@ describe('Integration test with visual testing - hover on category pages', funct
         cy.wait('@js_minify')
 
         cy.window().then(cyWindow => scrollToBottom({ remoteWindow: cyWindow, frequency: 150, timing: 50 }));
-        // cy.checkFreshChat()
+        // 
 
         cy.get('a[title="Sorrento Vorhang Weiß"]').siblings('.item__colors').children().eq(7).realHover().wait(500)
         // cy.percySnapshot('Hover: Sorrento Vorhang Rose')
@@ -425,7 +424,7 @@ describe('Integration test with visual testing - hover on category pages', funct
         cy.wait('@js_minify')
 
         cy.window().then(cyWindow => scrollToBottom({ remoteWindow: cyWindow, frequency: 150, timing: 50 }));
-        // cy.checkFreshChat()
+        // 
 
         cy.get('a[title="Teramo Verdunkelungsvorhang Grau"]').siblings('.item__colors').children().eq(3).realHover().wait(500)
         // cy.percySnapshot('Hover: Vorhang Teramo Rot')
