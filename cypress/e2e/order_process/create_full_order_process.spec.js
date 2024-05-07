@@ -27,7 +27,6 @@ describe('Integration test with visual testing - order process incl. all product
 
     it('pdp2checkout: configure products and go 2 checkout', function () {
 
-        basisplissee.configure_basisplissee() 
         doppelrollo.configure_doppelrollo()
         fliegengitter.configure_fliegengitter()
         holzjalousie.configure_holzjalousie()
