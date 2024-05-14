@@ -12,7 +12,7 @@ jobs:
     steps:
       - name: Checkout 
         uses: actions/checkout@v4
-      - name: run-tests
+      - name: Run Cypress tests - manually
         uses: cypress-io/github-action@v6
         with:
           browser: chrome
