@@ -1,4 +1,4 @@
-name: Cypress Tests LIV
+name: Cypress visual tests - LIV part I
 
 on:
   workflow_dispatch: # Manually trigger the workflow
@@ -16,6 +16,7 @@ jobs:
         uses: cypress-io/github-action@v6
         with:
           browser: chrome
+        env: ARGOS_TOKEN: §{{ secrets.ARGOS_TOKEN}}
 
   # scheduled-cypress-run-windows:
   #   runs-on: windows-latest
