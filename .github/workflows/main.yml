@@ -9,8 +9,6 @@ jobs:
   manual-cypress-run-windows:
     runs-on: windows-latest
     if: github.event_name == 'workflow_dispatch' # run only manually
-    tags:
-      - manual
     steps:
       - name: Checkout 
         uses: actions/checkout@v4
@@ -23,12 +21,12 @@ jobs:
           BASE_URL: ${{ secrets.BASE_URL }}
           STAGE_USER: ${{ secrets.STAGE_USER }}
           STAGE_PASSW: ${{ secrets.STAGE_PASSW }}
+    tags:
+      - manual
 
   scheduled-cypress-run-windows:
     runs-on: windows-latest
     if: github.event_name == 'schedule' # run only scheduled 
-    tags:
-      - scheduled
     steps:
       - name: Checkout - scheduled
         uses: actions/checkout@v4
@@ -41,3 +39,5 @@ jobs:
           BASE_URL: ${{ secrets.BASE_URL }}
           STAGE_USER: ${{ secrets.STAGE_USER }}
           STAGE_PASSW: ${{ secrets.STAGE_PASSW }}
+    tags:
+      - scheduled
