@@ -21,8 +21,6 @@ jobs:
           BASE_URL: ${{ secrets.BASE_URL }}
           STAGE_USER: ${{ secrets.STAGE_USER }}
           STAGE_PASSW: ${{ secrets.STAGE_PASSW }}
-    tags:
-      - manual
 
   scheduled-cypress-run-windows:
     runs-on: windows-latest
@@ -39,5 +37,3 @@ jobs:
           BASE_URL: ${{ secrets.BASE_URL }}
           STAGE_USER: ${{ secrets.STAGE_USER }}
           STAGE_PASSW: ${{ secrets.STAGE_PASSW }}
-    tags:
-      - scheduled
