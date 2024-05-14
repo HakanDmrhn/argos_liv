@@ -19,6 +19,8 @@ jobs:
         env: 
           ARGOS_TOKEN: §{{ secrets.ARGOS_TOKEN}}
           BASE_URL: §{{ secrets.BASE_URL}}
+          STAGE_PASSW: §{{ secrets.STAGE_PASSW}}
+          STAGE_USER: §{{ secrets.STAGE_USER}}
 
   # scheduled-cypress-run-windows:
   #   runs-on: windows-latest
