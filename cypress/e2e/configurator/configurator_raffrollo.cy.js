@@ -29,6 +29,12 @@ describe('Integration test with visual testing - raffrollo configurator', functi
             ]
         });
 
+        // ******************* Raffrollo Höhe und Breite eingeben **************
+        //input height and weight
+        cy.get('#hoehe_in_mm input').type('250')
+        cy.get('#breite_in_mm input').type('120')
+
+
         // ******************* Raffrollo - an der Wand *******************
         cy.get('div[options-property="befestigung"] > ul > :nth-child(1)').click()
         cy.argosScreenshot('Raffrollo - an der Wand', {
