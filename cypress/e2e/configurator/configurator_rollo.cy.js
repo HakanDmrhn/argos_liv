@@ -161,6 +161,11 @@ describe('Integration test with visual testing - rollo configurator', function (
             ]
         });
 
+        // ******************* Rollo Höhe und Breite eingeben *******************
+        //input height and weight
+        cy.get('#hoehe_in_mm input').type('1000')
+        cy.get('#breite_in_mm input').type('1000')
+
         // ******************* ohne Kassette - mit Motorbedienung *******************
         cy.get('div[options-property="bedienung"] > ul > :nth-child(2)').click()
         cy.argosScreenshot('Rollo - mK - mit Motorbedienung', {
