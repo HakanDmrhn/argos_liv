@@ -16,7 +16,9 @@ jobs:
         uses: cypress-io/github-action@v6
         with:
           browser: chrome
-        env: ARGOS_TOKEN: §{{ secrets.ARGOS_TOKEN}}
+        env: 
+          ARGOS_TOKEN: §{{ secrets.ARGOS_TOKEN}}
+          BASE_URL: §{{ secrets.BASE_URL}}
 
   # scheduled-cypress-run-windows:
   #   runs-on: windows-latest
