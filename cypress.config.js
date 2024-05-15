@@ -1,5 +1,6 @@
 const { defineConfig } = require("cypress");
 const { registerArgosTask } = require("@argos-ci/cypress/task");
+require('dotenv').config();
 
 module.exports = defineConfig({
   defaultCommandTimeout: 30000,
