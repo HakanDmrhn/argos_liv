@@ -5,6 +5,7 @@ describe('Integration test with visual testing - raffrollo configurator', functi
     beforeEach(function () {
 
         cy.visit('/raffrollo/raffrollo-konfigurator')
+        cy.ignoreMenuContainer()
     })
 
     it('rechteckige Raffrollos', function () {

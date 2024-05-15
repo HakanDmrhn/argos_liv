@@ -5,6 +5,7 @@ describe('Integration test with visual testing - jalousie configurator', functio
     beforeEach(function () {
 
         cy.visit('/jalousie/jalousie-konfigurator')
+        cy.ignoreMenuContainer()
     })
 
     it('Jalousie - 16mm', function () {

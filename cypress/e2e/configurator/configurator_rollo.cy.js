@@ -5,7 +5,7 @@ describe('Integration test with visual testing - rollo configurator', function (
     beforeEach(function () {
 
         cy.visit('/rollo/rollo-konfigurator')
-
+        cy.ignoreMenuContainer()
     })
 
     it('rechteckige Rollos - ohne Kassette', function () {

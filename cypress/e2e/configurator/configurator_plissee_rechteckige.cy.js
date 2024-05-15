@@ -5,6 +5,7 @@ describe('Integration test with visual testing - plissee configurator rechteckig
     beforeEach(function () {
 
         cy.visit('/plissee/plissee-konfigurator')
+        cy.ignoreMenuContainer()
     })
 
 

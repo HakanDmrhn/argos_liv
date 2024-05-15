@@ -5,6 +5,7 @@ describe('Integration test with visual testing - plissee configurator special sh
     beforeEach(function () {
 
         cy.visit('/plissee/plissee-konfigurator')
+        cy.ignoreMenuContainer()
     })
 
     it('Plissee - Sonderformen', function () {

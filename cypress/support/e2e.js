@@ -67,6 +67,19 @@ beforeEach(() => {
     hostname: 'www.livoneo.de',
   }).as('lazyload')
 
+})
 
+//custom command to check visibility of nav menu container
+Cypress.Commands.add('ignoreMenuContainer', () => {
 
+  // menu css selector: #nav-menu-container
+  cy.get('body').then(($body) => {
+    if ($body.find('#nav-menu-container').length) {
+      // iframe was found
+      cy.get('#nav-menu-container').invoke('attr', 'data-visual-test', 'transparent');
+    }
+    else {
+      cy.log('MENU CONTAINER NOT FOUND')
+    }
+  })
 })

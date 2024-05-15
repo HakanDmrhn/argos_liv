@@ -5,6 +5,7 @@ describe('Integration test with visual testing - schiebegardinen configurator', 
     beforeEach(function () {
 
         cy.visit('/schiebegardinen/schiebegardinen-konfigurator')
+        cy.ignoreMenuContainer()
     })
 
     it('Schiebegardine GS: einzelne Paneele', function () {

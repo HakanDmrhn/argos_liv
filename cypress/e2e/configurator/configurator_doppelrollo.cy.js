@@ -5,6 +5,7 @@ describe('Integration test with visual testing - doppelrollo configurator', func
     beforeEach(function () {
 
         cy.visit('/doppelrollo/doppelrollo-konfigurator')
+        cy.ignoreMenuContainer()
     })
 
     it('Doppelrollo Mini zum Klemmen', function () {
