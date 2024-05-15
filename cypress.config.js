@@ -9,11 +9,6 @@ module.exports = defineConfig({
   chromeWebSecurity: false,
   redirectionLimit: 100,
   userAgent: 'testing_agent_visual',
-  env: {
-    AUTH_USER: process.env.STAGE_USER,
-    AUTH_PASS: process.env.STAGE_PASSW,
-  },
-  // setupNodeEvents can also be defined in "component"
   e2e: {
     baseUrl: process.env.BASE_URL,
     async setupNodeEvents(on, config) {

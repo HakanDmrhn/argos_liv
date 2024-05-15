@@ -17,6 +17,7 @@
 
 import "@argos-ci/cypress/support";
 import "cypress-real-events";
+require('dotenv').config();
 
 
 
@@ -83,3 +84,14 @@ Cypress.Commands.add('ignoreMenuContainer', () => {
     }
   })
 })
+
+Cypress.Commands.overwrite('visit', (orig, url, options) => {
+  options = options || {};
+  if (process.env.STAGE_USER && process.env.STAGE_PASSW) {
+    options.auth = {
+      username: process.env.STAGE_USER,
+      password: process.env.STAGE_PASSW
+    };
+  }
+  return orig(url, options)
+});
