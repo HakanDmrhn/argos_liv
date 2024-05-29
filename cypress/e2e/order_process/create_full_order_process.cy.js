@@ -1,7 +1,6 @@
 var checkOut = require("../../support/checkout.js");
 var doppelrollo = require("../../support/configure_doppelrollo.js");
 var rollo = require("../../support/configure_rollo.js");
-var basisplissee = require("../../support/configure_basisplissee.js");
 var plissee = require("../../support/configure_plissee.js");
 var jalousie = require("../../support/configure_jalousie.js");
 var holzjalousie = require("../../support/configure_holzjalousie.js");

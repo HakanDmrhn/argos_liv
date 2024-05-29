@@ -3,10 +3,6 @@ module.exports = {
 
     configure_muster: function configure_muster() {
 
-        // muster basisplissee
-        cy.visit('/plissee/austero-4448')
-        cy.get('#free-samples-addtocart').click() 
-
         //muster doppelrollo
         cy.visit('/doppelrollo/rayure-5007')
         cy.get('#free-samples-addtocart').click()
